@@ -159,6 +159,26 @@ module Pod
           end
         end
       end
+      
+      #-----------------------------------------------------------------------#
+      
+      class List < Repo
+          self.summary = 'List repos'
+          
+          self.description = <<-DESC
+            List the repos from the local spec-repos directory at `~/.cocoapods/repos/.`
+          DESC
+          
+          def run
+              UI.puts "Listing repos\n".yellow
+              dirs = config.repos_dir.children.select {|c| c.directory?}
+              dirs.each do |dir|
+                  SourcesManager.check_version_information(dir)
+                  UI.puts "  - #{dir.realpath.basename}\n"
+              end
+              UI.puts "\n`#{dirs.length}` repos listed.\n".yellow
+          end
+      end
 
       extend Executable
       executable :git
