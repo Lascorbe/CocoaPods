@@ -169,14 +169,26 @@ module Pod
             List the repos from the local spec-repos directory at `~/.cocoapods/repos/.`
           DESC
           
+          def self.options
+            [["--count", "Shows the total number of spec repos"]].concat(super)
+          end
+      
+          def initialize(argv)
+            @count = argv.flag?('count')
+            super
+          end
+      
           def run
-              UI.puts "Listing repos\n".yellow
-              dirs = config.repos_dir.children.select {|c| c.directory?}
-              dirs.each do |dir|
-                  SourcesManager.check_version_information(dir)
-                  UI.puts "  - #{dir.realpath.basename}\n"
-              end
+            dirs = config.repos_dir.children.select {|c| c.directory?}
+            dirs.each do |dir|
+              SourcesManager.check_version_information(dir)
+              UI.puts "  - Path (#{dir.realpath.basename} ↩=) pod repo\n"
+              UI.puts "  origin URL\n" # URL only if it's a repo
+              UI.puts "  remote URL\n"
+            end
+            if @count
               UI.puts "\n`#{dirs.length}` repos listed.\n".yellow
+            end
           end
       end
 
