@@ -163,14 +163,14 @@ module Pod
       #-----------------------------------------------------------------------#
       
       class List < Repo
-          self.summary = 'List repos'
+        self.summary = 'List repos'
           
-          self.description = <<-DESC
-            List the repos from the local spec-repos directory at `~/.cocoapods/repos/.`
-          DESC
+        self.description = <<-DESC
+          List the repos from the local spec-repos directory at `~/.cocoapods/repos/.`
+        DESC
 
         def self.options
-          [["--count", "Show the total number of repos"]].concat(super)
+          [["--count", "Shows the total number of spec repos"]].concat(super)
         end
 
         def initialize(argv)

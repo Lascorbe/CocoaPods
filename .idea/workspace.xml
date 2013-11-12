@@ -8,7 +8,7 @@
     <ignored path="CocoaPods.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384247395038" ignored="false" />
-    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384270016046" ignored="false" />
+    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384270485333" ignored="false" />
     <file path="/command_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1382974288072" ignored="false" />
     <file path="/repo_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1382979199185" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +33,7 @@
       <file leaf-file-name="repo.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="57" selection-start="6099" selection-end="6099" vertical-scroll-proportion="0.7222222">
+            <state line="195" column="50" selection-start="6002" selection-end="6002" vertical-scroll-proportion="0.6180556">
               <folding />
             </state>
           </provider>
@@ -467,7 +467,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="57" selection-start="6099" selection-end="6099" vertical-scroll-proportion="0.7222222">
+        <state line="195" column="50" selection-start="6002" selection-end="6002" vertical-scroll-proportion="0.6180556">
           <folding />
         </state>
       </provider>
