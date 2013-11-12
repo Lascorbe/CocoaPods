@@ -95,7 +95,7 @@ module Pod
           if @name
             dirs = File.exists?(@name) ? [ Pathname.new(@name) ] : [ dir ]
           else
-            dirs = config.repos_dir.children.select {|c| c.directory?}
+            dirs = SourcesManager.aggregate.all
           end
           dirs.each do |dir|
             SourcesManager.check_version_information(dir)
@@ -168,16 +168,35 @@ module Pod
           self.description = <<-DESC
             List the repos from the local spec-repos directory at `~/.cocoapods/repos/.`
           DESC
-          
-          def run
-              UI.puts "Listing repos\n".yellow
-              dirs = config.repos_dir.children.select {|c| c.directory?}
-              dirs.each do |dir|
-                  SourcesManager.check_version_information(dir)
-                  UI.puts "  - #{dir.realpath.basename}\n"
+
+        def self.options
+          [["--count", "Show the total number of repos"]].concat(super)
+        end
+
+        def initialize(argv)
+          @count = argv.flag?('count')
+          super
+        end
+
+        def run
+          dirs = SourcesManager.aggregate.all
+          dirs.each do |source|
+            path = source.repo
+            puts "- #{path} (#{source} ↩=) pod repo"
+            Dir.chdir(path) do
+              status = `git status`
+              if $?.exitstatus == 0
+                url = `git remote -v`.chomp.split("\n").first
+                puts "#{url}"
               end
-              UI.puts "\n`#{dirs.length}` repos listed.\n".yellow
+            end
           end
+          if @count
+            numberOfRepos = dirs.length
+            repoString = numberOfRepos != 1 ? 'repos' : 'repo'
+            UI.puts "\n#{numberOfRepos} #{repoString}\n"
+          end
+        end
       end
 
       extend Executable
