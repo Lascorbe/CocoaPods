@@ -8,6 +8,7 @@ module Pod
       # @todo should not show a usage banner!
       #
       self.summary = 'Manage spec-repositories'
+      self.default_subcommand = 'list'
 
       class Add < Repo
         self.summary = 'Add a spec repo.'

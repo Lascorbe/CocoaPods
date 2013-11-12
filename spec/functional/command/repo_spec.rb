@@ -11,6 +11,11 @@ module Pod
         config.repos_dir = SpecHelper.tmp_repos_path
       end
 
+      it "lists a repository" do
+        repo = fixture('spec-repos/test_repo').to_s
+        lambda { run_command('repo', 'list', repo) }.should.not.raise
+      end
+
       it "updates a repository" do
         upstream = SpecHelper.temporary_directory + 'upstream'
         FileUtils.cp_r(test_repo_path, upstream)

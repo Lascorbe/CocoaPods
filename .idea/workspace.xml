@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3bd71de-f89a-4e40-8265-e15167ae46f7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/unit/command_spec.rb" afterPath="$PROJECT_DIR$/spec/unit/command_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cocoapods/command/repo.rb" afterPath="$PROJECT_DIR$/lib/cocoapods/command/repo.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/functional/command/repo_spec.rb" afterPath="$PROJECT_DIR$/spec/functional/command/repo_spec.rb" />
     </list>
     <ignored path="CocoaPods.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384247395038" ignored="false" />
-    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384270485333" ignored="false" />
+    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384271267355" ignored="false" />
     <file path="/command_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1382974288072" ignored="false" />
-    <file path="/repo_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1382979199185" ignored="false" />
+    <file path="/repo_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384271430292" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="repo.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="repo.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="50" selection-start="6002" selection-end="6002" vertical-scroll-proportion="0.6180556">
+            <state line="195" column="60" selection-start="5990" selection-end="5990" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -42,16 +43,16 @@
       <file leaf-file-name="command_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/unit/command_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="111" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
+            <state line="18" column="84" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="repo_spec.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="repo_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/functional/command/repo_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="92" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
+            <state line="18" column="58" selection-start="507" selection-end="507" vertical-scroll-proportion="0.3125">
               <folding />
             </state>
           </provider>
@@ -465,23 +466,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
+    <entry file="file://$PROJECT_DIR$/spec/unit/command_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="50" selection-start="6002" selection-end="6002" vertical-scroll-proportion="0.6180556">
+        <state line="18" column="84" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/unit/command_spec.rb">
+    <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="111" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
+        <state line="195" column="60" selection-start="5990" selection-end="5990" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/functional/command/repo_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="92" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
+        <state line="18" column="58" selection-start="507" selection-end="507" vertical-scroll-proportion="0.3125">
           <folding />
         </state>
       </provider>
