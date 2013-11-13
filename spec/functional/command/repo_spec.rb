@@ -11,11 +11,6 @@ module Pod
         config.repos_dir = SpecHelper.tmp_repos_path
       end
 
-      it "lists a repository" do
-        repo = fixture('spec-repos/test_repo').to_s
-        lambda { run_command('repo', 'list', repo) }.should.not.raise
-      end
-
       it "updates a repository" do
         upstream = SpecHelper.temporary_directory + 'upstream'
         FileUtils.cp_r(test_repo_path, upstream)
@@ -66,6 +61,17 @@ module Pod
         lambda { run_command('repo', 'remove', upstream) }.should.not.raise
         File.directory?(test_repo_path + upstream).should.be.false?
       end
+
+      it "lists a repository (it must not break)" do
+        repo = fixture('spec-repos/test_repo').to_s
+        lambda { run_command('repo', 'list', repo) }.should.not.raise
+      end
+
+      it "lists a repository (checking the output)" do
+        output = run_command('repo', 'list')
+        output.should.include? 'pod repo'
+      end
+
     end
   end
 end
