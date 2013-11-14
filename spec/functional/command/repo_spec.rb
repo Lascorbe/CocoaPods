@@ -63,13 +63,12 @@ module Pod
       end
 
       it "lists a repository (it must not break)" do
-        repo = fixture('spec-repos/test_repo').to_s
-        lambda { run_command('repo', 'list', repo) }.should.not.raise
+        should.not.raise { run_command('repo', 'list') }
       end
 
       it "lists a repository (checking the output)" do
         output = run_command('repo', 'list')
-        output.should.include? 'pod repo'
+        output.should.include? '- type:'
       end
 
     end

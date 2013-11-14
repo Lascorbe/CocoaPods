@@ -183,12 +183,22 @@ module Pod
           dirs = SourcesManager.aggregate.all
           dirs.each do |source|
             path = source.repo
-            puts "- #{path} (#{source} ↩=) pod repo"
-            Dir.chdir(path) do
-              status = `git status`
-              if $?.exitstatus == 0
-                url = `git remote -v`.chomp.split("\n").first
-                puts "#{url}"
+            UI.title source.name do
+              Dir.chdir(path) do
+                `git status 2>&1`
+                if $?.exitstatus.zero?
+                  UI.puts "- type: git"
+                  branches = git!("branch -vv").split("\n")
+                  branch = branches.find { |line| line.start_with?('*') }
+                  remote_name = branch.split("[")[1].split("/")[0]
+                  remote_info = git!("remote show -n origin").split("\n")
+                  url_line = remote_info.find { |line| line.include?('Fetch URL') }
+                  url = url_line.split("URL: ")[1]
+                  UI.puts "- URL:  #{url}"
+                else
+                  UI.puts "- type: local copy"
+                end
+                UI.puts "- path: #{path}"
               end
             end
           end
