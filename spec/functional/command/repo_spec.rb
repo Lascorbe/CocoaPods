@@ -62,10 +62,6 @@ module Pod
         File.directory?(test_repo_path + upstream).should.be.false?
       end
 
-      it "lists a repository (it must not break)" do
-        should.not.raise { run_command('repo', 'list') }
-      end
-
       it "lists a repository (checking the output)" do
         output = run_command('repo', 'list')
         output.should.include? '- type:'

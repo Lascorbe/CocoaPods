@@ -185,13 +185,13 @@ module Pod
             path = source.repo
             UI.title source.name do
               Dir.chdir(path) do
-                `git status 2>&1`
-                if $?.exitstatus.zero?
-                  UI.puts "- type: git"
+                git('rev-parse  >/dev/null 2>&1')
+                if $?.success?
                   branches = git!("branch -vv").split("\n")
                   branch = branches.find { |line| line.start_with?('*') }
                   remote_name = branch.split("[")[1].split("/")[0]
-                  remote_info = git!("remote show -n origin").split("\n")
+                  UI.puts "- type: git (#{remote_name})"
+                  remote_info = git!("remote show -n #{remote_name}").split("\n")
                   url_line = remote_info.find { |line| line.include?('Fetch URL') }
                   url = url_line.split("URL: ")[1]
                   UI.puts "- URL:  #{url}"
