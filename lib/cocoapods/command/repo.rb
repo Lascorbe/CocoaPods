@@ -189,12 +189,16 @@ module Pod
                 if $?.success?
                   branches = git!("branch -vv").split("\n")
                   branch = branches.find { |line| line.start_with?('*') }
-                  remote_name = branch.split("[")[1].split("/")[0]
-                  UI.puts "- type: git (#{remote_name})"
-                  remote_info = git!("remote show -n #{remote_name}").split("\n")
-                  url_line = remote_info.find { |line| line.include?('Fetch URL') }
-                  url = url_line.split("URL: ")[1]
-                  UI.puts "- URL:  #{url}"
+                  if branch.include?("[")
+                    remote_name = branch.split("[")[1].split("/")[0]
+                    UI.puts "- type: git (#{remote_name})"
+                    remote_info = git!("remote show -n #{remote_name}").split("\n")
+                    url_line = remote_info.find { |line| line.include?('Fetch URL') }
+                    url = url_line.split("URL: ")[1]
+                    UI.puts "- URL:  #{url}"
+                  else
+                    UI.puts "- type: git (no remote information available)"
+                  end
                 else
                   UI.puts "- type: local copy"
                 end
