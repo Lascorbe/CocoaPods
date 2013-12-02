@@ -7,7 +7,7 @@
     <ignored path="CocoaPods.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1385973725407" ignored="false" />
-    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1385974291663" ignored="false" />
+    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1385975106135" ignored="false" />
     <file path="/command_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384361073325" ignored="false" />
     <file path="/repo_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384431591080" ignored="false" />
     <file path="$USER_HOME$/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/pathname.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384438975358" ignored="false" />
@@ -33,7 +33,7 @@
       <file leaf-file-name="repo.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="223" column="35" selection-start="6774" selection-end="6774" vertical-scroll-proportion="0.5659722">
+            <state line="191" column="49" selection-start="5962" selection-end="5962" vertical-scroll-proportion="-0.14583333">
               <folding />
             </state>
           </provider>
@@ -455,7 +455,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="35" selection-start="6774" selection-end="6774" vertical-scroll-proportion="0.5659722">
+        <state line="191" column="49" selection-start="5962" selection-end="5962" vertical-scroll-proportion="-0.14583333">
           <folding />
         </state>
       </provider>

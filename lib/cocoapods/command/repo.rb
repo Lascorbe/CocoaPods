@@ -187,6 +187,7 @@ module Pod
               Dir.chdir(path) do
                 if is_a_repository
                   branch = get_branch
+                  # To know more about the branch output, look at the example at `get_branch`
                   if branch.include?("[")
                     remote_name = get_remote_name(branch)
                     UI.puts "- type: git (#{remote_name})"
@@ -223,15 +224,23 @@ module Pod
       end
 
       def get_branch
+        # The output is something like:
+        # "* master 8e58e86 [origin/master] Merge pull request #5444 from Lascorbe/patch-1"
         branches = git!("branch -vv").split("\n")
         return branches.find { |line| line.start_with?('*') }
       end
 
       def get_remote_name(branch)
+        # To know more about the output, look at the example at `get_branch`
         return branch.split("[")[1].split("/")[0]
       end
 
       def get_url_of_git_repo(remote_name)
+        # The expected output is something like:
+        # * remote origin
+        #   Fetch URL: https://github.com/Lascorbe/CocoaPods.git
+        #   Push  URL: https://github.com/Lascorbe/CocoaPods.git
+        #   ...
         remote_info = git!("remote show -n #{remote_name}").split("\n")
         url_line = remote_info.find { |line| line.include?('Fetch URL') }
         return url_line.split("URL: ")[1]
