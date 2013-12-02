@@ -185,16 +185,12 @@ module Pod
             path = source.repo
             UI.title source.name do
               Dir.chdir(path) do
-                git('rev-parse  >/dev/null 2>&1')
-                if $?.success?
-                  branches = git!("branch -vv").split("\n")
-                  branch = branches.find { |line| line.start_with?('*') }
+                if is_a_repository
+                  branch = get_branch
                   if branch.include?("[")
-                    remote_name = branch.split("[")[1].split("/")[0]
+                    remote_name = get_remote_name(branch)
                     UI.puts "- type: git (#{remote_name})"
-                    remote_info = git!("remote show -n #{remote_name}").split("\n")
-                    url_line = remote_info.find { |line| line.include?('Fetch URL') }
-                    url = url_line.split("URL: ")[1]
+                    url = get_url_of_git_repo(remote_name)
                     UI.puts "- URL:  #{url}"
                   else
                     UI.puts "- type: git (no remote information available)"
@@ -207,9 +203,9 @@ module Pod
             end
           end
           if @count
-            numberOfRepos = dirs.length
-            repoString = numberOfRepos != 1 ? 'repos' : 'repo'
-            UI.puts "\n#{numberOfRepos} #{repoString}\n"
+            number_of_repos = dirs.length
+            repo_string = number_of_repos != 1 ? 'repos' : 'repo'
+            UI.puts "\n#{number_of_repos} #{repo_string}\n"
           end
         end
       end
@@ -219,6 +215,26 @@ module Pod
 
       def dir
         config.repos_dir + @name
+      end
+
+      def is_a_repository
+        git('rev-parse  >/dev/null 2>&1')
+        return $?.success?
+      end
+
+      def get_branch
+        branches = git!("branch -vv").split("\n")
+        return branches.find { |line| line.start_with?('*') }
+      end
+
+      def get_remote_name(branch)
+        return branch.split("[")[1].split("/")[0]
+      end
+
+      def get_url_of_git_repo(remote_name)
+        remote_info = git!("remote show -n #{remote_name}").split("\n")
+        url_line = remote_info.find { |line| line.include?('Fetch URL') }
+        return url_line.split("URL: ")[1]
       end
     end
   end

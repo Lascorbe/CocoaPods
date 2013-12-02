@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bd71de-f89a-4e40-8265-e15167ae46f7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cocoapods/command/repo.rb" afterPath="$PROJECT_DIR$/lib/cocoapods/command/repo.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CocoaPods.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1385572581471" ignored="false" />
-    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1385572693211" ignored="false" />
+    <file path="/Dummy.txt" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1385973725407" ignored="false" />
+    <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1385974291663" ignored="false" />
     <file path="/command_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384361073325" ignored="false" />
     <file path="/repo_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384431591080" ignored="false" />
     <file path="$USER_HOME$/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/pathname.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384438975358" ignored="false" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="repo.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="44" selection-start="6356" selection-end="6356" vertical-scroll-proportion="0.4965278">
+            <state line="223" column="35" selection-start="6774" selection-end="6774" vertical-scroll-proportion="0.5659722">
               <folding />
             </state>
           </provider>
@@ -266,8 +265,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="editor" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -309,7 +308,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27415144" sideWeight="0.6704036" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2780679" sideWeight="0.6704036" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -456,7 +455,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="44" selection-start="6356" selection-end="6356" vertical-scroll-proportion="0.4965278">
+        <state line="223" column="35" selection-start="6774" selection-end="6774" vertical-scroll-proportion="0.5659722">
           <folding />
         </state>
       </provider>
