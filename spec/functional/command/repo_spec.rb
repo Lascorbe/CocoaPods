@@ -63,6 +63,7 @@ module Pod
       end
 
       it "lists a repository (checking the output)" do
+        config.repos_dir = fixture('spec-repos')
         output = run_command('repo', 'list')
         output.should.include? '- type:'
       end

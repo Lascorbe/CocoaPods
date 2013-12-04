@@ -232,7 +232,7 @@ module Pod
       #
       def get_branch_name
         branch_name = git!("name-rev --name-only HEAD")
-        return branch_name.strip
+        branch_name.strip
       end
 
       # Returns the branch remote name (i.e. origin)
@@ -241,8 +241,9 @@ module Pod
       #         The branch name to look for the remote name.
       #
       def get_branch_remote_name(branch_name)
+        p branch_name
         remote_name = git!("config branch.#{branch_name}.remote")
-        return remote_name.strip
+        remote_name.strip
       end
 
       # Returns the url of the given remote name (i.e. git@github.com:CocoaPods/Specs.git)
@@ -251,7 +252,7 @@ module Pod
       #         The branch remote name to look for the url.
       #
       def get_url_of_git_repo(remote_name)
-        return git!("config remote.#{remote_name}.url")
+        git!("config remote.#{remote_name}.url")
       end
     end
   end

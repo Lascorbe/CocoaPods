@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a3bd71de-f89a-4e40-8265-e15167ae46f7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cocoapods/command/repo.rb" afterPath="$PROJECT_DIR$/lib/cocoapods/command/repo.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/functional/command/repo_spec.rb" afterPath="$PROJECT_DIR$/spec/functional/command/repo_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CocoaPods.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1386161496408" ignored="false" />
+    <file path="/Dummy.txt" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1386163437151" ignored="false" />
     <file path="/repo.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1386161578955" ignored="false" />
     <file path="/command_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384361073325" ignored="false" />
     <file path="/repo_spec.rb" changelist="a3bd71de-f89a-4e40-8265-e15167ae46f7" time="1384431591080" ignored="false" />
@@ -31,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="repo.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="repo.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="9" selection-start="7258" selection-end="7258" vertical-scroll-proportion="0.47916666">
+            <state line="254" column="47" selection-start="7893" selection-end="7893" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -67,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="repo_spec.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="repo_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/functional/command/repo_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="16" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0">
+            <state line="47" column="112" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.44444445">
               <folding />
             </state>
           </provider>
@@ -95,8 +96,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/spec/unit/command_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/functional/command/repo_spec.rb" />
         <option value="$PROJECT_DIR$/lib/cocoapods/command/repo.rb" />
+        <option value="$PROJECT_DIR$/spec/functional/command/repo_spec.rb" />
       </list>
     </option>
   </component>
@@ -284,8 +285,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="editor" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -327,7 +328,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23629242" sideWeight="0.6704036" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23955613" sideWeight="0.6704036" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -467,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cocoapods/sources_manager.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="19" selection-start="5557" selection-end="5566" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/cocoapods/executable.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -481,16 +475,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cocoapods/sources_manager.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="19" selection-start="5557" selection-end="5566" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/cocoapods/command/repo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="9" selection-start="7258" selection-end="7258" vertical-scroll-proportion="0.47916666">
+        <state line="254" column="47" selection-start="7893" selection-end="7893" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/functional/command/repo_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="16" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0">
+        <state line="47" column="112" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.44444445">
           <folding />
         </state>
       </provider>
