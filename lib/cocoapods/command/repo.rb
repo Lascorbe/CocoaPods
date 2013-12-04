@@ -179,17 +179,27 @@ module Pod
           super
         end
 
+        # @output  Examples:
+        #
+        #          master
+        #          - type: git (origin)
+        #          - URL:  https://github.com/CocoaPods/Specs.git
+        #          - path: /Users/lascorbe/.cocoapods/repos/master
+        #
+        #          test
+        #          - type: local copy
+        #          - path: /Users/lascorbe/.cocoapods/repos/test
+        #
         def run
           dirs = SourcesManager.aggregate.all
           dirs.each do |source|
             path = source.repo
             UI.title source.name do
               Dir.chdir(path) do
-                if is_a_repository
-                  branch = get_branch
-                  # To know more about the branch output, look at the example at `get_branch`
-                  if branch.include?("[")
-                    remote_name = get_remote_name(branch)
+                if SourcesManager.git_repo?(path)
+                  branch_name = get_branch_name
+                  remote_name = get_branch_remote_name(branch_name)
+                  if remote_name
                     UI.puts "- type: git (#{remote_name})"
                     url = get_url_of_git_repo(remote_name)
                     UI.puts "- URL:  #{url}"
@@ -218,32 +228,30 @@ module Pod
         config.repos_dir + @name
       end
 
-      def is_a_repository
-        git('rev-parse  >/dev/null 2>&1')
-        return $?.success?
+      # Returns the branch name (i.e. master)
+      #
+      def get_branch_name
+        branch_name = git!("name-rev --name-only HEAD")
+        return branch_name.strip
       end
 
-      def get_branch
-        # The output is something like:
-        # "* master 8e58e86 [origin/master] Merge pull request #5444 from Lascorbe/patch-1"
-        branches = git!("branch -vv").split("\n")
-        return branches.find { |line| line.start_with?('*') }
+      # Returns the branch remote name (i.e. origin)
+      #
+      # @param  [BranchName] branch_name
+      #         The branch name to look for the remote name.
+      #
+      def get_branch_remote_name(branch_name)
+        remote_name = git!("config branch.#{branch_name}.remote")
+        return remote_name.strip
       end
 
-      def get_remote_name(branch)
-        # To know more about the output, look at the example at `get_branch`
-        return branch.split("[")[1].split("/")[0]
-      end
-
+      # Returns the url of the given remote name (i.e. git@github.com:CocoaPods/Specs.git)
+      #
+      # @param  [RemoteName] remote_name
+      #         The branch remote name to look for the url.
+      #
       def get_url_of_git_repo(remote_name)
-        # The expected output is something like:
-        # * remote origin
-        #   Fetch URL: https://github.com/Lascorbe/CocoaPods.git
-        #   Push  URL: https://github.com/Lascorbe/CocoaPods.git
-        #   ...
-        remote_info = git!("remote show -n #{remote_name}").split("\n")
-        url_line = remote_info.find { |line| line.include?('Fetch URL') }
-        return url_line.split("URL: ")[1]
+        return git!("config remote.#{remote_name}.url")
       end
     end
   end
